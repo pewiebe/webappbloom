@@ -99,3 +99,8 @@ C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\obj\Debug\net7.0\refint\webapp
 C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\obj\Debug\net7.0\webappbloom.pdb
 C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\obj\Debug\net7.0\webappbloom.genruntimeconfig.cache
 C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\obj\Debug\net7.0\ref\webappbloom.dll
+C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\bin\Debug\net7.0\Humanizer.dll
+C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\ALUNO\Desktop\taxobloom-dia3\webappbloom\bin\Debug\net7.0\System.CodeDom.dll

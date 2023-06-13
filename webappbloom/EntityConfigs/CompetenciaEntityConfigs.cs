@@ -6,7 +6,6 @@ namespace WebAppBloom.EntityConfigs;
 
 public class CompetenciaEntityConfig : IEntityTypeConfiguration<Competencia>
 {
-
     public void Configure(EntityTypeBuilder<Competencia> builder)
     {
         builder.ToTable("Competencia");
@@ -24,11 +23,4 @@ public class CompetenciaEntityConfig : IEntityTypeConfiguration<Competencia>
         .HasColumnType("varchar(60)")
         .IsRequired();
     }
-
-
 }
-
-
-
-
-
