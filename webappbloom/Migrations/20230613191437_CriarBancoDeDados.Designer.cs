@@ -26,21 +26,19 @@ namespace webappbloom.Migrations
 
             modelBuilder.Entity("WebAppBloom.Models.Competencia", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<string>("ColunaBloom")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(60)")
+                        .HasColumnName("ColunaBloom");
 
                     b.Property<string>("LinhaBloom")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(60)")
+                        .HasColumnName("LinhaBloom");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Competencias");
+                    b.ToTable("Competencia", (string)null);
                 });
 #pragma warning restore 612, 618
         }

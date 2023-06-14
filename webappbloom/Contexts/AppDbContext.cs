@@ -1,21 +1,29 @@
-namespace WebAppBloom.Contexts;
-using WebAppBloom.Models;
 using Microsoft.EntityFrameworkCore;
+using WebAppBloom.EntityConfigs;
+using WebAppBloom.Models;//inserir não esquecer
+namespace WebAppBloom.Contexts;
 
+//DbContext --> Banco
+//DbSet  --> Tabela
 
-//Contexto = Banco
-//DbContexto --> Banco
-// DBSet --> Tabela
-// Banco ":" Herança
-
+//Banco ":" herança
 public class AppDbContext:DbContext{
-//Tabela
-public DbSet<Competencia> Competencias => Set<Competencia>();
+   //Tabela - Criar a tabela
+   //DbSet<Competencia>
+   public DbSet<Competencia> Competencias => Set<Competencia>();//tabela
 
-
+    //override - sobrescrita -polimorfismo
+    //mesmo método sobrescrito
+    //configurar conexão
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=LAB-F08-09;Database=WebAppBloom;User Id=sa;Password=senai@123;TrustServerCertificate=True;");
+       optionsBuilder.UseSqlServer("Server=LAB-F08-09;Database=WebAppBloom;User Id=sa;Password=senai@123;TrustServerCertificate=True;");
+    }
+
+    //aplicar as configurações da tabela
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(new CompetenciaEntityConfig());
     }
 
 }

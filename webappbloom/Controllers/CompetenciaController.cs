@@ -1,12 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using WebAppBloom.Models;
 using WebAppBloom.ViewModels;
+using WebAppBloom.Contexts;
 namespace WebAppBloom.Controllers;
 
 
 public class CompetenciaController : Controller
 {
+     private readonly AppDbContext _context;
 
+   public CompetenciaController(AppDbContext context){
+        _context = context;
+   } 
     public IActionResult Index()
     {
 
@@ -18,8 +23,7 @@ public class CompetenciaController : Controller
         return View();
     }
 
-    public IActionResult RelatorioCompe()
-    {
+    public IActionResult RelatorioCompe(){
 
         var competencia = new Competencia()
         {
@@ -36,5 +40,14 @@ public class CompetenciaController : Controller
         return View(viewModel);
 
     }
-
+        public IActionResult Listar(){
+    //pega os dados do banco 
+    var listaCompe = _context.Competencias.ToList();
+    //envia o objeto listaCompe (dados do banco)
+    //para a ViewModel (ICollection)<> List<>)
+    var listaViewModel = new ListaCompetenciaViewModel{
+        Competencias = listaCompe
+    };
+    return View(listaViewModel);
+}
 }
