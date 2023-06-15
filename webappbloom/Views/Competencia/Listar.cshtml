@@ -19,19 +19,6 @@
 
 </table>-->
 
-
-<style>
-    .table-header {
-        font-weight: bold;
-        background-color: #f2f2f2;
-    }
-    .table-cell {
-        border: 1px solid black;
-        border-radius: 10px;
-        padding: 8px;
-    }
-</style>
-
 @model ListaCompetenciaViewModel
 
 <h1>Listando Competências</h1>
@@ -40,6 +27,7 @@
         <th class="table-cell">Id</th>
         <th class="table-cell">Coluna Bloom</th>
         <th class="table-cell">Linha Bloom</th>
+        
     </tr>
     @{
         foreach (var item in Model.Competencias)
@@ -51,5 +39,32 @@
             </tr>
         }
     }
+    <style>
+        
+    table {
+        margin: 20px 0;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: center;
+        border-bottom: 5px solid #ff0000;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    .horizontal-row {
+        white-space: nowrap;
+    }
+
+    .square-cell {
+        border: 1px solid #000; 
+        padding: 5px; 
+    }
+</style>
 </table>
 
